@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Guild of the Silver Dragon</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        <header>
+            <div class="header-top">
+                <h1 id="guild-title">Guild of the Silver Dragon</h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" alt="The silver moon is the symbol of the guild" width="565" height="390">
+            </div>
+            <div h1 id="guild-alert-title">Guild Board</div>
+            <nav class="guild-nav">
+                <a href="index.html" class="custom-red">Home</a>
+                <a href="quests.html" class="custom-red">Quests</a>
+                <a href="inventory.html" class="custom-red">Inventory</a>
+            </nav>
+            <input id="hero-name" placeholder="Enter your hero's name">
+            <p id="hero-preview">Your hero's name will appear here.</p>
+            <div class="join-guild-section">
+                <button id="join-guild">Join the Guild</button>
+                <p id="join-guild-message"></p>
+            </div>
+        </header>
+        <main>
+            <section id="intro">
+                <p>Welcome to the Guild of the Silver Dragon! We are a community of adventurers, storytellers, and enthusiasts dedicated to exploring the realms of fantasy and imagination. Join us as we embark on epic quests, share tales of heroism, and celebrate the magic that binds us together.
+            </p>
+                <a href="https://dnd.wizards.com">Enter the guild hall</a>
+            </section>   
+            <section id="guild-ranks">
+            <h2>Guild Ranks path of advancement</h2>
+            <ol>
+                <li>Initiate</li>
+                <li>Dragon Squire</li>
+                <li>Silver Knight</li>
+                <li>Paladin</li>
+                <li>Dragonsworn</li>
+            </ol>
+            </section>
+            <section id="rank-one-guild">
+                <h2 class="rank-one-guild">#1: Burug</h2>
+                <p>Burug is the Number one ranked party in the guild.</p>
+                <p>Burug party members include:</p>
+                <ul>
+                    <li class="elite-member">Gensk The Fallen</li>
+                    <li class="elite-member">Suhayb Dragonsbane</li>
+                    <li class="elite-member">Bin Yamin Spellweaver</li>
+                </ul>
+            </section>
+            <section id="quest-board">
+                <h2>Quest Board</h2>
+                <article id="starter-quest-card" class="quest-card">
+                    <h3 id="quest-title-starter">Starter Quest</h3>
+                    <p id="quest-text-starter">Defeat 3 slimes.</p>
+                    <a id="quest-link-starter" href="https://example.com/slimes">View slime quest details</a>
+
+                </article>
+                <article id="elite-quest-card" class="quest-card">
+                    <h3 class="urgent-quest elite-mission-title">Dragon Hunt</h3>
+                    <p class="quest-description">A fearsome dragon has been terrorizing the countryside. Brave adventurers are needed to track it down and put an end to its reign of terror.</p>
+                    <p class="quest-reward">Reward: 500 gold pieces and a legendary weapon</p>
+                    <p class="quest-location">Location: Report to the guild hall at dawn.</p>
+                </article>
+                <article class="quest-card goblin-quest">
+                    <h3 class="urgent-quest">Goblin Menace</h3>
+                    <p class="quest-description">A group of goblins has been raiding local villages. We need skilled adventurers to eliminate the threat and restore peace to the region.</p>
+                    <p class="quest-reward">Reward: 200 gold pieces and a rare magical item</p>
+                </article>
+                <article class="quest-card rescue-quest">
+                    <h3 class="urgent-quest">Rescue the Princess</h3>
+                    <p class="quest-description">The princess has been kidnapped by a band of marauding orcs. We need brave heroes to rescue her and bring her back safely.</p>
+                    <p class="quest-reward">Reward: 300 gold pieces and a royal favor</p>
+                </article>
+            </section>
+            <section>
+                <h2>Add New Quest</h2>
+                <form id="add-quest-form">
+                    <label for="quest-title-input">Quest Title:</label>
+                    <input type="text" id="quest-title-input" name="quest-title">
+                    <button type="submit">Add Quest</button>
+                </form>                    
+            </section>
+            <section>
+                <h2>Added Quests</h2>
+                <ul id="added-quests-list">
+                    <!-- New quests will be added here -->
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2026 Guild of the Silver Dragon. All rights reserved.</p>
+        </footer>
+        <script src="script.js" defer></script>
+    </body>
+    
+</html>
