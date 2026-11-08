@@ -76,3 +76,25 @@ footer {
     border-top: 1px solid #333;
     font-size: 0.85rem;
 }
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+#added-quests-list li button {
+    margin-left: 12px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    background-color: #b22222;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#added-quests-list li button:hover {
+    background-color: #8b0000;
+}
+.completed-quest {
+    color: green;
+    font-style: italic;
+    text-decoration: line-through;
+}

@@ -3,6 +3,7 @@ alert("Welcome to the Guild of the Silver Dragon!");
 const questInput = document.querySelector('#quest-title-input');
 const form = document.querySelector('#add-quest-form');
 const addedQuestsList = document.querySelector('#added-quests-list');
+const completedQuestsList = document.querySelector('#completed-quests-list');
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -12,8 +13,24 @@ form.addEventListener('submit', function (event) {
 
     const newQuestItem = document.createElement('li');
     newQuestItem.textContent = questTitle;
-    addedQuestsList.appendChild(newQuestItem);
     
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', function () {
+        const completedQuestItem = document.createElement('li');
+        completedQuestItem.textContent = newQuestItem.firstChild.textContent;
+        completedQuestItem.classList.add('completed-quest');
+        completedQuestsList.appendChild(completedQuestItem);
+        newQuestItem.remove();
+    });
+    
+    newQuestItem.appendChild(deleteButton);
+
+    newQuestItem.addEventListener('click', function () {
+        newQuestItem.classList.toggle('done');
+    });
+        
+    addedQuestsList.appendChild(newQuestItem);
     questInput.value = '';
  });
 
@@ -43,7 +60,7 @@ questText.textContent = 'Defeat 4 wolves';
 questText.innerHTML = 'Defeat <strong>4 wolves</strong>';
 
 const starterQuestCard = document.querySelector('#starter-quest-card');
-starterQuestCard.style.backgroundColor = 'darkslateblue';
+starterQuestCard.style.backgroundColor = 'darkblue';
 starterQuestCard.style.color = 'yellow';
 
 const questLinkStarter = document.querySelector('#quest-link-starter');
